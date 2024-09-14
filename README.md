@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/2430eb2f-1a1e-48df-83c2-1f56221b5e4a)# Task Description
+# Task Description
 
 Please read through [this](https://www.overleaf.com/read/dmgrrcmpkbkq#211e69) document before moving forward.
 
