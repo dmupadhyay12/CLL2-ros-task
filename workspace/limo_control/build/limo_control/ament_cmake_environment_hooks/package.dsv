@@ -1,0 +1,4 @@
+source;share/limo_control/local_setup.bash
+source;share/limo_control/local_setup.dsv
+source;share/limo_control/local_setup.sh
+source;share/limo_control/local_setup.zsh

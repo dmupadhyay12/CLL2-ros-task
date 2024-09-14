@@ -11,6 +11,9 @@ run_docker() {
     --env="DISPLAY" \
     --env="QT_X11_NO_MITSHM=1" \
     -v $(dirname "$0")/app.sh:/root/app.sh \
+    -v $(dirname "$0")/../../workspace/limo_control/launch/limo_control.launch.py:/root/limo_control.launch.py \
+    -v $(dirname "$0")/../../workspace/limo_control/logs/generate_error_plot.py:/root/generate_error_plot.py \
+    -v $(dirname "$0")/../../workspace/src/target_error.csv:/root/target_error.csv \
     $@
 }
 

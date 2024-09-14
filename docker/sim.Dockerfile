@@ -11,11 +11,15 @@ RUN apt-get install --no-install-recommends -y \
     software-properties-common \
     vim \
     python3-pip \
-    python3-tk
+    python3-tk 
+
+RUN pip install --no-cache-dir pandas matplotlib
 
 # Added updated mesa drivers for integration with cpu - https://github.com/ros2/rviz/issues/948#issuecomment-1428979499
-RUN add-apt-repository ppa:kisak/kisak-mesa && \
-    apt-get update && apt-get upgrade -y
+# RUN add-apt-repository ppa:kisak/kisak-mesa && \
+#     apt-get update && apt-get upgrade -y
+
+RUN apt-get update && apt-get upgrade -y
 
 # Cyclone DDS
 RUN apt-get install --no-install-recommends -y \

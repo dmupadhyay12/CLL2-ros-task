@@ -6,7 +6,7 @@ source "$(dirname "$0")/base.sh"
 stop_docker
 
 # declare mode, use gpu by default
-mode="gpu"
+# mode="gpu"
 
 # declare sim, use sim by default
 sim="True"
@@ -26,10 +26,10 @@ shift "$(($OPTIND -1))"
 
 if [ "$mode" == "gpu" ]; then
     run_docker --runtime=nvidia \
-    -v $(dirname "$0")/../../workspace/:/root/workspace/src \
+    -v "$(dirname "$0")/../../workspace/:/root/workspace/src \
     limo_bot:sim bash
 else
     run_docker \
-    -v $(dirname "$0")/../../workspace/:/root/workspace/src \
+    -v "$(dirname "$0")/../../workspace/:/root/workspace/src \
     limo_bot:sim bash
 fi
